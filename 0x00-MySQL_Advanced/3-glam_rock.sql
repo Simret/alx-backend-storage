@@ -1,4 +1,5 @@
 -- Calculated Longetivity of bands with Glam rock
+-- Lifespan (in years)
 
 SELECT band_name, (IFNULL(split, '2020') - formed) AS lifespan 
 FROM metal_bands 
