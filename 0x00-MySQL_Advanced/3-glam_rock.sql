@@ -2,5 +2,5 @@
 
 SELECT band_name, COALESCE(split, 2020) - formed AS lifespan 
 FROM metal_bands 
-WHERE style like '%Glam rock%'
+WHERE FIND_IN_SET('Glam rock', IFNULL(style, "")) > 0
 ORDER BY lifespan DESC;
