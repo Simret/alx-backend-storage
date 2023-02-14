@@ -2,6 +2,6 @@
 """List a document in Python"""
 
 
-def schools_by_topic(mongo_collection, topics):
+def schools_by_topic(mongo_collection, topic):
     """List"""
-    return mongo_collection.find({"topics": topics})
+    return mongo_collection.find({"topics": topic})
